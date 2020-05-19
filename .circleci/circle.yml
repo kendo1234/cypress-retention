@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - cypress/run:
+          executor: cypress/browsers-chrome73-ff68
+          browser: firefox
+          start: npm start
+          wait-on: http://localhost:3000
