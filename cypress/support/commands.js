@@ -25,12 +25,12 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('searchForBats', (searchTerm) => {
-    cy.get('#twotabsearchtextbox')
+Cypress.Commands.add('oldFaithful', (searchTerm) => {
+    cy.get('#tsf > div:nth-child(2) > div.A8SBwf > div.RNNXgb > div > div.a4bIc > input')
         .type(searchTerm)
-    cy.get('#nav-search-submit-text > input')
+    cy.get('.aajZCb > .tfB0Bf > center > .gNO89b')
         .click()
-    cy.get('#search > div.s-desktop-width-max.s-desktop-content.sg-row > div.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span:nth-child(4) > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(1) > div > span > div > div > div:nth-child(2) > div.sg-col-4-of-12.sg-col-8-of-16.sg-col-12-of-20.sg-col > div > div:nth-child(1) > div > div > div:nth-child(1) > h2 > a > span')
-        .contains('Hush')
-});
+    cy.get('#hdtb-msb-vis > :nth-child(2) > .q')
+        .click()
+})
 
